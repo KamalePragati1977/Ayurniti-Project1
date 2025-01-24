@@ -1,0 +1,282 @@
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background-color: #c1e1ca;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #ffffff;
+        box-shadow: o 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+        height: 60px;
+    }
+
+    nav {
+        gap: 25px;
+        display: flex;
+    }
+
+    nav a {
+        padding: 15px 30px;
+        background-color: #a8d5af;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #2e593f;
+        font-weight: bold;
+        font-size: larger;
+        transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+        background-color: #356544;
+        color: #ffffff;
+    }
+
+    .about-section {
+        display: flex;
+        padding: 50px;
+        justify-content: center;
+        gap: 50px;
+        background-color: #d7efdd;
+    }
+
+    .about-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .about-image img {
+        max-width: 80%;
+        border-radius: 10px;
+    }
+
+    .about-image img:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(14, 55, 31, 0.896);
+    }
+
+    .about-content {
+        flex: 1;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: sans-serif;
+    }
+
+    .about-content:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(14, 55, 31, 0.896);
+    }
+    .about-content:hover h2{
+        color:rgb(48, 169, 100);
+    }
+    .about-content:hover p{
+        color:darkgreen;
+        font-weight: 600;
+    }
+
+    .about-content h2 {
+        font-size: 2em;
+        color: #2e593f;
+        margin-bottom: 20px;
+    }
+    .about-content h2:hover{
+        color:#0a0b0b;
+
+    }
+
+    .about-content p {
+        font-size: 0.9em;
+        color: #3a4b3e;
+        line-height: 1.6;
+        font-family: sans-serif;
+    }
+
+
+    .values-section {
+        padding: 50px;
+        background-color: #f3f9f5;
+        text-align: center;
+    }
+
+    .values-section h3 {
+        font-size: 2em;
+        color: #2e593f;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .values-grid {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .value-item {
+        flex: 1;
+        max-width: 330px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .value-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(47, 157, 93, 0.896);
+    }
+    .value-item:hover h4{
+        color:darkgreen;
+
+    }
+
+    .value-item h4 {
+        font-size: 1.4em;
+        color: #2e593f;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .value-item:hover p{
+        color:darkcyan;
+    }
+
+    .value-item p {
+        font-size: 0.9em;
+        color: #3a4b3e;
+        line-height: 1.6;
+        font-family: sans-serif;
+    }
+    .chatbot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 15px;
+        background-color: #6f66ee;
+        color: #ffffff;
+        border-radius: 50%;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none;
+    
+      }
+      .chatbot-button:hover {
+        background-color: #7fa2b6;
+      }
+
+    @media (min-width: 768px) {
+        header {
+            padding: 1rem 3rem;
+        }
+    
+        nav {
+            gap: 2rem;
+        }
+    
+        .text-content h2 {
+            font-size: 2.5rem;
+        }
+    
+        .text-content p {
+            font-size: 1.5rem;
+        }
+    
+        .chakra-image img{
+            max-width: 600px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        nav {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    
+        .text-content h2 {
+            font-size: 1.8rem;
+        }
+    
+        .text-content p {
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .text-content h2 {
+            font-size: 1.5rem;
+        }
+    
+        .text-content p {
+            font-size: 0.9rem;
+        }
+    
+        .text-content .button{
+            padding: 0.6rem 1rem;
+        }
+        .chatbot-button {
+            width: 30px;
+            height: 30px;
+            bottom: 15px;
+            right: 15px;
+        }
+        .about-content p {
+            /* font-size: 0.9em;
+            color: #3a4b3e;
+            line-height: 1.6;
+            font-family: sans-serif; */
+            width: 200px;
+            height: 200px;
+           
+        }
+        /* .about-image img {
+            /* max-width: 80%;
+            border-radius: 10px; */
+            /* display: none; }*/
+        
+        .about-content {
+            /* flex: 1;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: sans-serif; */
+            width: 250px;
+            max-height: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-image{
+            display: none;
+        }
+        .about-image img{
+            display: none;
+        }
+    
+    
+    }
